@@ -1,0 +1,139 @@
+IQ-TREE multicore version 2.2.2.6 COVID-edition for Windows 64-bit built May 27 2023
+Developed by Bui Quang Minh, James Barbetti, Nguyen Lam Tung,
+Olga Chernomor, Heiko Schmidt, Dominik Schrempf, Michael Woodhams, Ly Trong Nhan.
+
+Host:    LAPTOP-766RKAP8 (AVX2, FMA3, 15 GB RAM)
+Command: iqtree2 -s nextclade.aligned.fasta -m MF -mset JC,K80,SYM,F81,HKY,GTR -mrate E,G,I,G+I -nt AUTO
+Seed:    850200 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Wed Aug 09 11:33:33 2023
+Kernel:  AVX+FMA - auto-detect threads (16 CPU cores detected)
+
+Reading alignment file nextclade.aligned.fasta ... Fasta format detected
+Reading fasta file: done in 0.0123144 secs
+Alignment most likely contains DNA/RNA sequences
+Constructing alignment: done in 0.0285634 secs using 601.7% CPU
+WARNING: 2 sites contain only gaps or ambiguous characters.
+Alignment has 28 sequences with 29903 columns, 594 distinct patterns
+118 parsimony-informative, 321 singleton sites, 29464 constant sites
+                                      Gap/Ambiguity  Composition  p-value
+Analyzing sequences: done in 2.45e-05 secs
+   1  USA/MD-CDC-ASC210277356/2021            5.11%    passed     21.00%
+   2  GHA/1651_S3/2020                        1.14%    passed     98.80%
+   3  England/MILK-1567218/2021               1.24%    passed     99.76%
+   4  Estonia/Cov0319/2020                    0.28%    passed     99.81%
+   5  Iceland/1173/2020                       0.25%    passed     99.55%
+   6  EGY/CUNCI-HGC09I030/2020                0.37%    passed     99.93%
+   7  NZL/20CV0589/2020                       3.97%    passed     96.05%
+   8  AUS/VIC3454/2020                        0.30%    passed     99.69%
+   9  USA/JDYI/2020                           0.40%    passed     99.92%
+  10  FRA/IHUCOVID-036058-NovaE/2021          1.46%    passed     99.66%
+  11  England/MILK-BDC2A2/2020                0.47%    passed     99.84%
+  12  BRA/PR-NVBS936GENOV827686254257/2021    0.28%    passed     99.92%
+  13  USA/CA-CDC-QDX26400331/2021             1.58%    passed     98.74%
+  14  England/MILK-1564EF9/2021               3.92%    passed     99.75%
+  15  USA/CA-CZB-22906/2021                   0.20%    passed     99.81%
+  16  England/CAMC-1395ED3/2021               4.04%    passed     96.85%
+  17  USA/GU-CDC-2-3906074/2021               0.17%    passed     99.86%
+  18  USA/NY-CDC-LC0031214/2021               3.91%    passed     93.98%
+  19  Switzerland/ZH-UZH-IMV-3ba4d945/2021    0.28%    passed     99.64%
+  20  USA/FL-CDC-FG-022848/2021               4.53%    passed     96.22%
+  21  USA/FL-CDC-QDX26157271/2021             0.45%    passed     99.99%
+  22  England/QEUH-173F5F0/2021               1.15%    passed     99.71%
+  23  Switzerland/AG-ETHZ-35947998/2022       1.56%    passed     99.60%
+  24  Denmark/DCGC-323445/2022                0.63%    passed     99.80%
+  25  USA/PA-CDC-QDX34289597/2022             0.63%    passed     99.98%
+  26  USA/NC-CDC-LC0597531/2022               0.54%    passed     99.75%
+  27  BHR/22920323375_S6_L001/2022            1.99%    passed     94.97%
+  28  USA/RI-CDC-LC0586837/2022               0.49%    passed     99.46%
+****  TOTAL                                   1.48%  0 sequences failed composition chi2 test (p-value<5%; df=3)
+Checking for duplicate sequences: done in 0.0001499 secs
+
+Creating fast initial parsimony tree by random order stepwise addition...
+0.004 seconds, parsimony score: 519 (based on 439 sites)
+Measuring multi-threading efficiency up to 16 CPU cores
+Increase to 10 rounds for branch lengths
+2766 trees examined
+Threads: 1 / Time: 16.000 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -47316
+Threads: 2 / Time: 9.761 sec / Speedup: 1.639 / Efficiency: 82% / LogL: -47316
+Threads: 3 / Time: 7.894 sec / Speedup: 2.027 / Efficiency: 68% / LogL: -47316
+Threads: 4 / Time: 7.128 sec / Speedup: 2.245 / Efficiency: 56% / LogL: -47316
+Threads: 5 / Time: 6.866 sec / Speedup: 2.330 / Efficiency: 47% / LogL: -47316
+Determining AUTO threadcount: done in 47.6695 secs using 205.8% CPU
+BEST NUMBER OF THREADS: 4
+
+Perform fast likelihood tree search using GTR+I+G model...
+Estimate model parameters (epsilon = 5.000)
+Perform nearest neighbor interchange...
+Optimizing NNI: done in 0.0117348 secs using 133.2% CPU
+Estimate model parameters (epsilon = 1.000)
+1. Initial log-likelihood: -45145.996
+Optimal log-likelihood: -45145.847
+Rate parameters:  A-C: 0.44950  A-G: 1.42483  A-T: 0.25398  C-G: 0.48130  C-T: 3.58468  G-T: 1.00000
+Base frequencies:  A: 0.299  C: 0.183  G: 0.196  T: 0.322
+Proportion of invariable sites: 0.495
+Gamma shape alpha: 0.020
+Parameters optimization took 1 rounds (0.016 sec)
+Time for fast ML tree search: 0.063 seconds
+
+NOTE: ModelFinder requires 2 MB RAM!
+ModelFinder will test up to 24 DNA models (sample size: 29903) ...
+ No. Model         -LnL         df  AIC          AICc         BIC
+  1  JC            46435.680    53  92977.360    92977.552    93417.563
+  2  JC+G4         46335.127    54  92778.254    92778.453    93226.762
+  3  JC+I          46263.052    54  92634.104    92634.303    93082.613
+  4  JC+I+G4       46293.355    55  92696.710    92696.916    93153.524
+  5  K2P           46296.899    54  92701.798    92701.997    93150.306
+  6  K2P+G4        46196.246    55  92502.492    92502.699    92959.307
+  7  K2P+I         46123.593    55  92357.185    92357.391    92813.999
+  8  K2P+I+G4      46154.334    56  92420.668    92420.882    92885.788
+  9  SYM           46246.438    58  92608.876    92609.105    93090.607
+ 10  SYM+G4        46145.230    59  92408.461    92408.698    92898.498
+ 11  SYM+I         46070.105    59  92258.209    92258.447    92748.246
+ 12  SYM+I+G4      46092.275    60  92304.550    92304.796    92802.893
+ 13  F81+F         45488.097    56  91088.194    91088.408    91553.314
+ 14  F81+F+G4      45388.601    57  90891.201    90891.423    91364.627
+ 15  F81+F+I       45322.244    57  90758.488    90758.710    91231.914
+ 16  F81+F+I+G4    45348.259    58  90812.518    90812.748    91294.250
+ 17  HKY+F         45337.755    57  90789.509    90789.731    91262.935
+ 18  HKY+F+G4      45239.230    58  90594.460    90594.689    91076.191
+ 19  HKY+F+I       45177.889    58  90471.779    90472.008    90953.510
+ 20  HKY+F+I+G4    45200.226    59  90518.452    90518.690    91008.490
+ 21  GTR+F         45281.518    61  90685.036    90685.290    91191.685
+ 22  GTR+F+G4      45183.705    62  90491.410    90491.672    91006.365
+ 23  GTR+F+I       45126.564    62  90377.127    90377.389    90892.082
+ 24  GTR+F+I+G4    45145.641    63  90417.281    90417.552    90940.541
+Akaike Information Criterion:           GTR+F+I
+Corrected Akaike Information Criterion: GTR+F+I
+Bayesian Information Criterion:         GTR+F+I
+Best-fit model: GTR+F+I chosen according to BIC
+
+All model information printed to nextclade.aligned.fasta.model.gz
+CPU time for ModelFinder: 100.484 seconds (0h:1m:40s)
+Wall-clock time for ModelFinder: 48.533 seconds (0h:0m:48s)
+
+NOTE: 0 MB RAM (0 GB) is required!
+Estimate model parameters (epsilon = 0.010)
+1. Initial log-likelihood: -45126.564
+2. Current log-likelihood: -45126.553
+3. Current log-likelihood: -45126.522
+Optimal log-likelihood: -45126.517
+Rate parameters:  A-C: 0.39228  A-G: 1.28587  A-T: 0.24500  C-G: 0.40218  C-T: 3.14678  G-T: 1.00000
+Base frequencies:  A: 0.299  C: 0.183  G: 0.196  T: 0.322
+Proportion of invariable sites: 0.940
+Parameters optimization took 3 rounds (0.019 sec)
+Wrote distance file to... 
+BEST SCORE FOUND : -45126.517
+Total tree length: 0.017
+
+Total number of iterations: 0
+CPU time used for tree search: 0.000 sec (0h:0m:0s)
+Wall-clock time used for tree search: 0.000 sec (0h:0m:0s)
+Total CPU time used: 0.016 sec (0h:0m:0s)
+Total wall-clock time used: 0.043 sec (0h:0m:0s)
+
+Analysis results written to: 
+  IQ-TREE report:                nextclade.aligned.fasta.iqtree
+  Tree used for ModelFinder:     nextclade.aligned.fasta.treefile
+  Screen log file:               nextclade.aligned.fasta.log
+
+Date and Time: Wed Aug 09 11:34:22 2023
